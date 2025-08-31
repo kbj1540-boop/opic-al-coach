@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <title>OPIc AL 코치</title>
+  <meta name="theme-color" content="#0f172a"/>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="apple-touch-icon" href="./assets/icon-192.png">
+  <meta name="description" content="브라우저에서 OPIc 모의시험 연습 · 녹음 · 전사 · 피드백">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+</head>
+<body class="min-h-screen bg-slate-50 text-slate-900">
+  <div id="root"></div>
+
+  <script>
+    // 아주 간단한 React 컴포넌트 예시 (테스트용)
+    const { useState } = React;
+    function App() {
+      const [count, setCount] = useState(0);
+      return React.createElement("div",{className:"p-6"},
+        React.createElement("h1",{className:"text-2xl font-bold"},"OPIc AL 코치 (테스트 버전)"),
+        React.createElement("p",null,"버튼 클릭 횟수: ", count),
+        React.createElement("button",{onClick:()=>setCount(count+1),
+          className:"mt-3 px-4 py-2 bg-slate-900 text-white rounded"},"클릭")
+      );
+    }
+    ReactDOM.createRoot(document.getElementById("root")).render(React.createElement(App));
+  </script>
+</body>
+</html>
